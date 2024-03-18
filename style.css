@@ -1,0 +1,130 @@
+html {
+width: 100vw;
+height: 100vh;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+padding: 50px 80px;
+}
+
+.show {
+background-color: lightgray;
+display: block;
+border: none;
+color: black;
+padding: 15px 32px;
+font-size: 16px;
+margin: 40px auto;
+cursor: pointer;
+font-weight: 800;
+border-radius: 5px;
+}
+
+form>p:first-child {
+font-size: 24px;
+font-weight: 900;
+}
+
+dialog {
+animation: fade-out 0.6s ease-out;
+border-radius: 10px;
+padding: 16px 24px;
+}
+
+dialog[open]::backdrop {
+backdrop-filter: blur(1px);
+}
+
+dialog[open] {
+animation: fade-in 0.6s ease-in;
+}
+
+form>input {
+display: block;
+height: 30px;
+width: 250px;
+margin-bottom: 16px;
+}
+
+form>input::placeholder {
+font-size: 12px;
+text-transform: uppercase;
+font-weight: 900;
+}
+
+form>div {
+display: flex;
+justify-content: space-between;
+}
+
+form>div>button {
+background-color: lightgray;
+border: none;
+color: black;
+padding: 6px 12px;
+font-size: 14px;
+cursor: pointer;
+font-weight: 800;
+border-radius: 5px;
+}
+
+.titles>span {
+font-weight: 800;
+}
+
+.results>div>button:last-child {
+width: 100px;
+background-color: red;
+padding: 8px 6px;
+border: none;
+color: white;
+cursor: pointer;
+}
+
+.results>div>button {
+text-align: left;
+width: 100px;
+background-color: transparent;
+padding: 8px 6px;
+border: 1px solid black;
+color: black;
+cursor: pointer;
+}
+
+.results>div,
+.titles {
+display: grid;
+grid-template-columns: repeat(5, minmax(150px, 1fr));
+padding-top: 16px;
+padding-bottom: 8px;
+border-bottom: 1px solid lightgray;
+}
+
+@keyframes fade-in {
+0% {
+    opacity: 0;
+    transform: scale(0);
+    display: none;
+}
+
+100% {
+    opacity: 1;
+    transform: scale(1);
+    display: block;
+}
+}
+
+@keyframes fade-out {
+0% {
+    opacity: 1;
+    transform: scale(1);
+    display: block;
+}
+
+100% {
+    opacity: 0;
+    transform: scale(0);
+    display: none;
+}
+}
