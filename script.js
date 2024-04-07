@@ -103,7 +103,17 @@ submitButton.addEventListener("click", (event) => {
   // Prevent the form from submitting
   event.preventDefault();
 
-  addBookToLibrary();
+  const title = document.querySelector(".title").value;
+  const author = document.querySelector(".author").value;
+  const pages = document.querySelector(".pages").value;
+
+  if (title === "" || author === "" || pages === "") {
+    dialogEle.close();
+  } else {
+    addBookToLibrary();
+  }
+
+ 
 
   // Close dialog after submission
   dialogEle.close();
